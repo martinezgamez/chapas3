@@ -1,0 +1,28 @@
+{%  extends "bootstrap/base.html" %}
+{%  import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Nueva Chapa {% endblock %}
+
+
+
+{% block pp %}
+  <h1>Nueva chapa</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <form id="upload-form" action="{{ url_for('upload') }}" method="GET" enctype="multipart/form-data">
+        <d1>
+
+            {{ wtf.form_field(form.username) }}
+            {{ wtf.form_field(form.password) }}
+
+
+        </d1>
+
+
+    <input type="submit" value="send">
+    </form>
+    </div>
+
+{% endblock %}
